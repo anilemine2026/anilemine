@@ -1,14 +1,12 @@
 <!DOCTYPE html>
-
 <html lang="tr">
 <head>
   <meta charset="UTF-8">
 
-<meta
-name="viewport"
-content="width=device-width, initial-scale=1"
-
->
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1"
+  >
 
   <title>Anıl & Emine 💍</title>
 
@@ -86,8 +84,6 @@ content="width=device-width, initial-scale=1"
       font: inherit;
     }
 
-    /* Açılış animasyonu */
-
     #intro {
       position: fixed;
       inset: 0;
@@ -134,9 +130,9 @@ content="width=device-width, initial-scale=1"
       content: "";
       position: absolute;
       bottom: 0;
+      z-index: 4;
       width: 0;
       height: 0;
-      z-index: 4;
     }
 
     .envelope::before {
@@ -145,7 +141,6 @@ content="width=device-width, initial-scale=1"
       border-top: 95px solid transparent;
       border-bottom: 95px solid #dfbea5;
       border-right: 145px solid transparent;
-      border-radius: 0 0 0 10px;
     }
 
     .envelope::after {
@@ -154,7 +149,6 @@ content="width=device-width, initial-scale=1"
       border-top: 95px solid transparent;
       border-bottom: 95px solid #e8cbb4;
       border-left: 145px solid transparent;
-      border-radius: 0 0 10px 0;
     }
 
     .flap {
@@ -184,8 +178,8 @@ content="width=device-width, initial-scale=1"
       border-radius: 50%;
       transform: translateX(-50%);
       font-size: 27px;
-      background: #a96f4d;
-      color: #fff;
+      color: #ffffff;
+      background: var(--primary);
       box-shadow: 0 8px 20px rgba(106, 63, 39, 0.24);
       animation: hideSeal 0.45s ease 1s forwards;
     }
@@ -284,8 +278,6 @@ content="width=device-width, initial-scale=1"
       }
     }
 
-    /* Ana kart */
-
     .card {
       position: relative;
       width: 100%;
@@ -375,8 +367,8 @@ content="width=device-width, initial-scale=1"
       padding: 0 8px;
       transform: translate(-50%, -50%);
       font-size: 9px;
-      background: #fff;
       color: var(--primary-light);
+      background: #ffffff;
     }
 
     .hero p {
@@ -399,6 +391,11 @@ content="width=device-width, initial-scale=1"
       color: var(--text);
     }
 
+    .optional {
+      font-weight: 400;
+      color: var(--muted);
+    }
+
     input,
     textarea {
       width: 100%;
@@ -419,7 +416,7 @@ content="width=device-width, initial-scale=1"
     input:focus,
     textarea:focus {
       border-color: rgba(169, 111, 77, 0.4);
-      background: #fff;
+      background: #ffffff;
       box-shadow: 0 0 0 4px rgba(169, 111, 77, 0.08);
     }
 
@@ -484,7 +481,7 @@ content="width=device-width, initial-scale=1"
     }
 
     .file-list {
-      max-height: 170px;
+      max-height: 180px;
       padding-right: 5px;
       overflow-y: auto;
       text-align: left;
@@ -524,7 +521,7 @@ content="width=device-width, initial-scale=1"
       cursor: pointer;
       font-size: 17px;
       font-weight: 500;
-      color: #fff;
+      color: #ffffff;
       background: linear-gradient(
         90deg,
         var(--primary),
@@ -533,13 +530,11 @@ content="width=device-width, initial-scale=1"
       box-shadow: 0 12px 28px rgba(169, 111, 77, 0.22);
       transition:
         transform 0.2s ease,
-        opacity 0.2s ease,
-        box-shadow 0.2s ease;
+        opacity 0.2s ease;
     }
 
     .upload-button:hover:not(:disabled) {
       transform: translateY(-2px);
-      box-shadow: 0 16px 34px rgba(169, 111, 77, 0.28);
     }
 
     .upload-button:disabled {
@@ -573,7 +568,7 @@ content="width=device-width, initial-scale=1"
         var(--primary),
         var(--primary-light)
       );
-      transition: width 0.3s ease;
+      transition: width 0.25s ease;
     }
 
     .progress-text {
@@ -647,14 +642,12 @@ content="width=device-width, initial-scale=1"
       *,
       *::before,
       *::after {
-        scroll-behavior: auto !important;
         animation-duration: 0.01ms !important;
         animation-iteration-count: 1 !important;
         transition-duration: 0.01ms !important;
       }
     }
   </style>
-
 </head>
 
 <body>
@@ -662,35 +655,31 @@ content="width=device-width, initial-scale=1"
     <div class="intro-content">
       <div class="envelope-wrapper">
         <div class="envelope"></div>
+        <div class="flap"></div>
 
-```
-    <div class="flap"></div>
+        <div class="seal">
+          💍
+        </div>
 
-    <div class="seal">
-      💍
-    </div>
+        <div class="letter">
+          <div class="letter-small">
+            Hatıralarımız
+          </div>
 
-    <div class="letter">
-      <div class="letter-small">
-        Hatıralarımız
+          <div class="letter-names">
+            Anıl
+            <br>
+            &amp;
+            <br>
+            Emine
+          </div>
+        </div>
       </div>
 
-      <div class="letter-names">
-        Anıl
-        <br>
-        &amp;
-        <br>
-        Emine
+      <div class="intro-message">
+        Bu güzel güne hoş geldiniz
       </div>
     </div>
-  </div>
-
-  <div class="intro-message">
-    Bu güzel güne hoş geldiniz
-  </div>
-</div>
-```
-
   </div>
 
   <main class="card">
@@ -699,139 +688,142 @@ content="width=device-width, initial-scale=1"
         💍
       </div>
 
-```
-  <div class="eyebrow">
-    Birlikte nice güzel anılara
-  </div>
+      <div class="eyebrow">
+        Birlikte nice güzel anılara
+      </div>
 
-  <h1>
-    Anıl
-    <span class="ampersand">&amp;</span>
-    Emine
-  </h1>
+      <h1>
+        Anıl
+        <span class="ampersand">&amp;</span>
+        Emine
+      </h1>
 
-  <div class="line"></div>
+      <div class="line"></div>
 
-  <p>
-    Bu özel günümüzde bizimle olduğunuz için teşekkür ederiz.
-    Çektiğiniz fotoğrafları, videoları ve güzel dileklerinizi
-    bizimle paylaşarak anılarımıza ortak olabilirsiniz.
-  </p>
-</header>
+      <p>
+        Bu özel günümüzde bizimle olduğunuz için teşekkür ederiz.
+        Çektiğiniz fotoğrafları, videoları ve güzel dileklerinizi
+        bizimle paylaşarak anılarımıza ortak olabilirsiniz.
+      </p>
+    </header>
 
-<section class="form-area">
-  <label
-    class="field-label"
-    for="name"
-  >
-    İsminiz
-  </label>
+    <section class="form-area">
+      <label
+        class="field-label"
+        for="name"
+      >
+        İsminiz
+      </label>
 
-  <input
-    id="name"
-    type="text"
-    placeholder="Adınızı ve soyadınızı yazın"
-    autocomplete="name"
-    maxlength="100"
-  >
+      <input
+        id="name"
+        type="text"
+        placeholder="Adınızı ve soyadınızı yazın"
+        autocomplete="name"
+        maxlength="100"
+      >
 
-  <label
-    class="field-label"
-    for="note"
-  >
-    Bize bir not bırakın
-  </label>
+      <label
+        class="field-label"
+        for="note"
+      >
+        Bize bir not bırakın
+        <span class="optional">(isteğe bağlı)</span>
+      </label>
 
-  <textarea
-    id="note"
-    placeholder="Güzel dileklerinizi veya bugüne dair küçük bir anınızı yazabilirsiniz..."
-    maxlength="3000"
-  ></textarea>
+      <textarea
+        id="note"
+        placeholder="Güzel dileklerinizi veya bugüne dair küçük bir anınızı yazabilirsiniz..."
+        maxlength="3000"
+      ></textarea>
 
-  <label class="field-label">
-    Fotoğraf ve videolar
-  </label>
+      <label class="field-label">
+        Fotoğraf ve videolar
+      </label>
 
-  <div
-    class="drop"
-    id="drop"
-    role="button"
-    tabindex="0"
-    aria-label="Fotoğraf veya video seç"
-  >
-    <div
-      class="drop-content"
-      id="dropContent"
-    >
-      <span class="upload-icon">
-        📷
-      </span>
-
-      <span class="drop-title">
-        Fotoğraf ve videolarınızı seçin
-      </span>
-
-      <span class="drop-description">
-        Birden fazla dosya seçebilir veya bilgisayardan
-        sürükleyip buraya bırakabilirsiniz.
-      </span>
-    </div>
-
-    <input
-      id="file"
-      type="file"
-      accept="image/*,video/*"
-      multiple
-      hidden
-    >
-  </div>
-
-  <button
-    class="upload-button"
-    id="uploadButton"
-    type="button"
-  >
-    Anılarımızı Gönder 💍
-  </button>
-
-  <div
-    class="progress-area"
-    id="progressArea"
-  >
-    <div class="progress-track">
       <div
-        class="progress-bar"
-        id="progressBar"
+        class="drop"
+        id="drop"
+        role="button"
+        tabindex="0"
+        aria-label="Fotoğraf veya video seç"
+      >
+        <div
+          class="drop-content"
+          id="dropContent"
+        >
+          <span class="upload-icon">
+            📷
+          </span>
+
+          <span class="drop-title">
+            Fotoğraf ve videolarınızı seçin
+          </span>
+
+          <span class="drop-description">
+            Birden fazla dosya seçebilirsiniz.
+            Video başına en fazla 20 MB yüklenebilir.
+          </span>
+        </div>
+
+        <input
+          id="file"
+          type="file"
+          accept="image/*,video/*"
+          multiple
+          hidden
+        >
+      </div>
+
+      <button
+        class="upload-button"
+        id="uploadButton"
+        type="button"
+      >
+        Anılarımızı Gönder 💍
+      </button>
+
+      <div
+        class="progress-area"
+        id="progressArea"
+      >
+        <div class="progress-track">
+          <div
+            class="progress-bar"
+            id="progressBar"
+          ></div>
+        </div>
+
+        <div
+          class="progress-text"
+          id="progressText"
+        ></div>
+      </div>
+
+      <div
+        class="status"
+        id="status"
+        aria-live="polite"
       ></div>
-    </div>
 
-    <div
-      class="progress-text"
-      id="progressText"
-    ></div>
-  </div>
-
-  <div
-    class="status"
-    id="status"
-    aria-live="polite"
-  ></div>
-
-  <div class="footer-note">
-    Sevgiyle saklayacağımız her anı için teşekkür ederiz.
-  </div>
-</section>
-```
-
+      <div class="footer-note">
+        Sevgiyle saklayacağımız her anı için teşekkür ederiz.
+      </div>
+    </section>
   </main>
 
   <script>
     const API =
-      "https://script.google.com/macros/s/AKfycbyVVYz1gRwl5tkredkf7YpTMv3ln-K7OS_NapVFt_f9pdklxxgslNi7jOphAXbYBQmREA/exec";
-	  
+      "https://script.google.com/macros/s/AKfycbznUz1W9JGImfH0y0Vdx1zSPNulBGBJ_Qwun8LnHxl6BMzxTw8qdftyRIWIXNhT2I0pZg/exec";
 
-    const MAX_FILE_SIZE = 25 * 1024 * 1024;
-    const MAX_FILE_COUNT = 20;
+    const MAX_VIDEO_SIZE =
+      20 * 1024 * 1024;
+
+    const MAX_FILE_COUNT = 30;
+    const PARALLEL_UPLOAD_COUNT = 3;
+
+    const IMAGE_MAX_DIMENSION = 1920;
+    const IMAGE_QUALITY = 0.82;
 
     const intro = document.getElementById("intro");
     const nameInput = document.getElementById("name");
@@ -848,15 +840,7 @@ content="width=device-width, initial-scale=1"
     let selectedFiles = [];
     let isUploading = false;
 
-    function openFilePicker() {
-      if (!isUploading) {
-        fileInput.click();
-      }
-    }
-
-    drop.addEventListener("click", function () {
-      openFilePicker();
-    });
+    drop.addEventListener("click", openFilePicker);
 
     drop.addEventListener("keydown", function (event) {
       if (event.key === "Enter" || event.key === " ") {
@@ -866,8 +850,9 @@ content="width=device-width, initial-scale=1"
     });
 
     fileInput.addEventListener("change", function () {
-      const files = Array.from(fileInput.files || []);
-      setSelectedFiles(files);
+      setSelectedFiles(
+        Array.from(fileInput.files || [])
+      );
     });
 
     drop.addEventListener("dragover", function (event) {
@@ -890,22 +875,31 @@ content="width=device-width, initial-scale=1"
         return;
       }
 
-      const files = Array.from(event.dataTransfer.files || []);
-      const mediaFiles = files.filter(function (file) {
+      const files = Array.from(
+        event.dataTransfer.files || []
+      ).filter(function (file) {
         return (
           file.type.startsWith("image/") ||
           file.type.startsWith("video/")
         );
       });
 
-      setSelectedFiles(mediaFiles);
+      setSelectedFiles(files);
     });
 
-    uploadButton.addEventListener("click", uploadFiles);
+    uploadButton.addEventListener(
+      "click",
+      uploadFiles
+    );
+
+    function openFilePicker() {
+      if (!isUploading) {
+        fileInput.click();
+      }
+    }
 
     function setSelectedFiles(files) {
-      statusDiv.innerText = "";
-      statusDiv.className = "status";
+      clearStatus();
 
       if (!files.length) {
         selectedFiles = [];
@@ -924,20 +918,23 @@ content="width=device-width, initial-scale=1"
         return;
       }
 
-      const oversizedFiles = files.filter(function (file) {
-        return file.size > MAX_FILE_SIZE;
-      });
+      const invalidVideos = files.filter(
+        function (file) {
+          return (
+            file.type.startsWith("video/") &&
+            file.size > MAX_VIDEO_SIZE
+          );
+        }
+      );
 
-      if (oversizedFiles.length > 0) {
-        const oversizedNames = oversizedFiles
-          .map(function (file) {
-            return file.name;
-          })
-          .join("\n");
-
+      if (invalidVideos.length > 0) {
         alert(
-          "Aşağıdaki dosyalar 25 MB sınırını aşıyor:\n\n" +
-          oversizedNames
+          "Aşağıdaki videolar 20 MB sınırını aşıyor:\n\n" +
+          invalidVideos
+            .map(function (file) {
+              return file.name;
+            })
+            .join("\n")
         );
 
         fileInput.value = "";
@@ -957,14 +954,14 @@ content="width=device-width, initial-scale=1"
         </span>
 
         <span class="drop-description">
-          Birden fazla dosya seçebilir veya bilgisayardan
-          sürükleyip buraya bırakabilirsiniz.
+          Birden fazla dosya seçebilirsiniz.
+          Video başına en fazla 20 MB yüklenebilir.
         </span>
       `;
     }
 
     function renderSelectedFiles() {
-      const fileItems = selectedFiles
+      const items = selectedFiles
         .map(function (file) {
           return `
             <div class="file-item">
@@ -989,11 +986,11 @@ content="width=device-width, initial-scale=1"
         </div>
 
         <div class="file-list">
-          ${fileItems}
+          ${items}
         </div>
 
         <span class="drop-description">
-          Dosya seçimini değiştirmek için bu alana tekrar dokunun.
+          Seçimi değiştirmek için bu alana tekrar dokunun.
         </span>
       `;
     }
@@ -1012,160 +1009,375 @@ content="width=device-width, initial-scale=1"
         return;
       }
 
-      if (selectedFiles.length === 0) {
-        alert("Lütfen en az bir fotoğraf veya video seçin.");
+      if (!selectedFiles.length) {
+        alert(
+          "Lütfen en az bir fotoğraf veya video seçin."
+        );
+
         openFilePicker();
         return;
       }
 
-      isUploading = true;
-      uploadButton.disabled = true;
-      uploadButton.innerText = "Anılar gönderiliyor...";
-      statusDiv.className = "status";
-      statusDiv.innerText = "Dosyalarınız hazırlanıyor...";
+      startUploading();
 
-      progressArea.classList.add("visible");
-      updateProgress(0, selectedFiles.length);
-
-      let successfulUploads = 0;
-      const failedUploads = [];
+      let folderId;
 
       try {
-        for (
-          let index = 0;
-          index < selectedFiles.length;
-          index += 1
-        ) {
-          const file = selectedFiles[index];
+        statusDiv.innerText =
+          "Kişisel klasörünüz hazırlanıyor...";
 
-          statusDiv.innerText =
-            file.name + " yükleniyor...";
+        const initResponse =
+          await initializeGuestFolder(
+            person,
+            note
+          );
+
+        if (!initResponse.success) {
+          throw new Error(
+            initResponse.error ||
+            "Klasör oluşturulamadı."
+          );
+        }
+
+        folderId = initResponse.folderId;
+      } catch (error) {
+        console.error(error);
+
+        showError(
+          "Klasör hazırlanamadı. Lütfen tekrar deneyin."
+        );
+
+        finishUploading();
+        return;
+      }
+
+      const uploadQueue = selectedFiles.slice();
+
+      let completedCount = 0;
+      let successfulCount = 0;
+      const failedFiles = [];
+
+      updateProgress(
+        completedCount,
+        selectedFiles.length
+      );
+
+      async function worker() {
+        while (uploadQueue.length > 0) {
+          const originalFile = uploadQueue.shift();
+
+          if (!originalFile) {
+            return;
+          }
 
           try {
-            const response = await uploadSingleFile(
-              file,
-              person,
-              note
-            );
+            statusDiv.innerText =
+              originalFile.name +
+              " hazırlanıyor...";
+
+            const uploadFile =
+              await prepareFileForUpload(
+                originalFile
+              );
+
+            statusDiv.innerText =
+              originalFile.name +
+              " yükleniyor...";
+
+            const response =
+              await uploadSingleFile(
+                uploadFile,
+                folderId
+              );
 
             if (!response.success) {
               throw new Error(
-                response.error || "Bilinmeyen sunucu hatası"
+                response.error ||
+                "Dosya yüklenemedi."
               );
             }
 
-            successfulUploads += 1;
+            successfulCount += 1;
           } catch (error) {
             console.error(
-              "Dosya yükleme hatası:",
-              file.name,
+              originalFile.name,
               error
             );
 
-            failedUploads.push(file.name);
+            failedFiles.push(
+              originalFile.name
+            );
+          } finally {
+            completedCount += 1;
+
+            updateProgress(
+              completedCount,
+              selectedFiles.length
+            );
           }
-
-          updateProgress(
-            index + 1,
-            selectedFiles.length
-          );
         }
-
-        if (failedUploads.length === 0) {
-          showSuccess(
-            "✨ " +
-            successfulUploads +
-            " anınız bize ulaştı. Teşekkür ederiz ❤️"
-          );
-
-          resetForm();
-        } else if (successfulUploads > 0) {
-          showError(
-            successfulUploads +
-            " dosya başarıyla yüklendi. " +
-            failedUploads.length +
-            " dosya gönderilemedi: " +
-            failedUploads.join(", ")
-          );
-        } else {
-          showError(
-            "Dosyalar gönderilemedi. Lütfen tekrar deneyin."
-          );
-        }
-      } finally {
-        isUploading = false;
-        uploadButton.disabled = false;
-        uploadButton.innerText = "Anılarımızı Gönder 💍";
       }
+
+      const workerCount = Math.min(
+        PARALLEL_UPLOAD_COUNT,
+        selectedFiles.length
+      );
+
+      const workers = [];
+
+      for (
+        let index = 0;
+        index < workerCount;
+        index += 1
+      ) {
+        workers.push(
+          worker()
+        );
+      }
+
+      await Promise.all(workers);
+
+      if (failedFiles.length === 0) {
+        showSuccess(
+          "✨ " +
+          successfulCount +
+          " dosyanız bize ulaştı. Teşekkür ederiz ❤️"
+        );
+
+        resetForm();
+      } else if (successfulCount > 0) {
+        showError(
+          successfulCount +
+          " dosya yüklendi, " +
+          failedFiles.length +
+          " dosya yüklenemedi: " +
+          failedFiles.join(", ")
+        );
+      } else {
+        showError(
+          "Dosyalar yüklenemedi. Lütfen tekrar deneyin."
+        );
+      }
+
+      finishUploading();
     }
 
-    async function uploadSingleFile(file, person, note) {
-      const base64 = await readFileAsBase64(file);
+    async function initializeGuestFolder(
+      person,
+      note
+    ) {
+      const body = new URLSearchParams();
+
+      body.append("action", "init");
+      body.append("name", person);
+      body.append("note", note);
+
+      return sendRequest(body);
+    }
+
+    async function uploadSingleFile(
+      file,
+      folderId
+    ) {
+      const base64 =
+        await readFileAsBase64(file);
 
       const body = new URLSearchParams();
 
-      body.append("name", person);
-      body.append("note", note);
+      body.append("action", "upload");
+      body.append("folderId", folderId);
       body.append("file", base64);
       body.append("fileName", file.name);
       body.append(
         "mimeType",
-        file.type || "application/octet-stream"
+        file.type ||
+        "application/octet-stream"
       );
 
+      return sendRequest(body);
+    }
+
+    async function sendRequest(body) {
       const response = await fetch(API, {
         method: "POST",
         body: body,
         redirect: "follow"
       });
 
-      if (!response.ok) {
-        throw new Error(
-          "Sunucu yanıtı başarısız: " +
-          response.status
-        );
-      }
-
-      const responseText = await response.text();
+      const text = await response.text();
 
       try {
-        return JSON.parse(responseText);
+        return JSON.parse(text);
       } catch (error) {
         console.error(
-          "Geçersiz sunucu yanıtı:",
-          responseText
+          "Geçersiz yanıt:",
+          text
         );
 
         throw new Error(
-          "Sunucudan geçerli bir yanıt alınamadı."
+          "Sunucudan geçerli yanıt alınamadı."
         );
       }
     }
 
+    async function prepareFileForUpload(file) {
+      const isCompressibleImage =
+        file.type === "image/jpeg" ||
+        file.type === "image/png" ||
+        file.type === "image/webp";
+
+      if (!isCompressibleImage) {
+        return file;
+      }
+
+      return compressImage(file);
+    }
+
+    function compressImage(file) {
+      return new Promise(function (resolve) {
+        const image = new Image();
+        const objectUrl = URL.createObjectURL(file);
+
+        image.onload = function () {
+          URL.revokeObjectURL(objectUrl);
+
+          let width = image.naturalWidth;
+          let height = image.naturalHeight;
+
+          if (
+            width <= IMAGE_MAX_DIMENSION &&
+            height <= IMAGE_MAX_DIMENSION &&
+            file.size < 2 * 1024 * 1024
+          ) {
+            resolve(file);
+            return;
+          }
+
+          const scale = Math.min(
+            1,
+            IMAGE_MAX_DIMENSION /
+              Math.max(width, height)
+          );
+
+          width = Math.round(
+            width * scale
+          );
+
+          height = Math.round(
+            height * scale
+          );
+
+          const canvas =
+            document.createElement("canvas");
+
+          canvas.width = width;
+          canvas.height = height;
+
+          const context =
+            canvas.getContext("2d");
+
+          if (!context) {
+            resolve(file);
+            return;
+          }
+
+          context.drawImage(
+            image,
+            0,
+            0,
+            width,
+            height
+          );
+
+          canvas.toBlob(
+            function (blob) {
+              if (
+                !blob ||
+                blob.size >= file.size
+              ) {
+                resolve(file);
+                return;
+              }
+
+              const compressedName =
+                replaceExtensionWithJpg(
+                  file.name
+                );
+
+              resolve(
+                new File(
+                  [blob],
+                  compressedName,
+                  {
+                    type: "image/jpeg",
+                    lastModified: Date.now()
+                  }
+                )
+              );
+            },
+            "image/jpeg",
+            IMAGE_QUALITY
+          );
+        };
+
+        image.onerror = function () {
+          URL.revokeObjectURL(objectUrl);
+          resolve(file);
+        };
+
+        image.src = objectUrl;
+      });
+    }
+
+    function replaceExtensionWithJpg(fileName) {
+      const lastDot =
+        fileName.lastIndexOf(".");
+
+      if (lastDot > 0) {
+        return (
+          fileName.substring(0, lastDot) +
+          ".jpg"
+        );
+      }
+
+      return fileName + ".jpg";
+    }
+
     function readFileAsBase64(file) {
-      return new Promise(function (resolve, reject) {
+      return new Promise(function (
+        resolve,
+        reject
+      ) {
         const reader = new FileReader();
 
         reader.onload = function () {
-          const result = String(reader.result || "");
-          const commaIndex = result.indexOf(",");
+          const result = String(
+            reader.result || ""
+          );
+
+          const commaIndex =
+            result.indexOf(",");
 
           if (commaIndex === -1) {
             reject(
               new Error("Dosya okunamadı.")
             );
+
             return;
           }
 
           resolve(
-            result.substring(commaIndex + 1)
+            result.substring(
+              commaIndex + 1
+            )
           );
         };
 
         reader.onerror = function () {
           reject(
             new Error(
-              file.name + " okunurken hata oluştu."
+              file.name +
+              " okunurken hata oluştu."
             )
           );
         };
@@ -1174,10 +1386,41 @@ content="width=device-width, initial-scale=1"
       });
     }
 
-    function updateProgress(completed, total) {
+    function startUploading() {
+      isUploading = true;
+
+      uploadButton.disabled = true;
+      uploadButton.innerText =
+        "Anılar gönderiliyor...";
+
+      statusDiv.className = "status";
+
+      progressArea.classList.add(
+        "visible"
+      );
+
+      progressBar.style.width = "0%";
+      progressText.innerText =
+        "Yükleme hazırlanıyor...";
+    }
+
+    function finishUploading() {
+      isUploading = false;
+
+      uploadButton.disabled = false;
+      uploadButton.innerText =
+        "Anılarımızı Gönder 💍";
+    }
+
+    function updateProgress(
+      completed,
+      total
+    ) {
       const percentage =
         total > 0
-          ? Math.round((completed / total) * 100)
+          ? Math.round(
+              completed / total * 100
+            )
           : 0;
 
       progressBar.style.width =
@@ -1199,19 +1442,31 @@ content="width=device-width, initial-scale=1"
       renderEmptyDropArea();
 
       window.setTimeout(function () {
-        progressArea.classList.remove("visible");
+        progressArea.classList.remove(
+          "visible"
+        );
+
         progressBar.style.width = "0%";
         progressText.innerText = "";
-      }, 2500);
+      }, 3000);
+    }
+
+    function clearStatus() {
+      statusDiv.className = "status";
+      statusDiv.innerText = "";
     }
 
     function showSuccess(message) {
-      statusDiv.className = "status success";
+      statusDiv.className =
+        "status success";
+
       statusDiv.innerText = message;
     }
 
     function showError(message) {
-      statusDiv.className = "status error";
+      statusDiv.className =
+        "status error";
+
       statusDiv.innerText = message;
     }
 
@@ -1228,7 +1483,8 @@ content="width=device-width, initial-scale=1"
       }
 
       return (
-        (bytes / 1024 / 1024).toFixed(1) +
+        (bytes / 1024 / 1024)
+          .toFixed(1) +
         " MB"
       );
     }
@@ -1248,6 +1504,5 @@ content="width=device-width, initial-scale=1"
       }
     }, 6200);
   </script>
-
 </body>
 </html>
